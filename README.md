@@ -2,14 +2,20 @@
 implement native client for hbase  with c++,based on hbase 2.2 above version (current hbase master is 2.2 version later) 
 There are some diffrent between this project and apache/hbase native client.
 
-First is library rely , apache/hbase native client rely on GFLAGS ,FOLLY_LIBRARIES,and so on.
+First is libraries rely :
+     
+	apache/hbase native client rely on GFLAGS,glog ,Wangle(C++ networking library) which depends fizz, folly(FOLLY_LIBRARIES),and so on.  These librarys are completed by google and facebook.
+     
+	c2hbase only just use Poco and C++ standard library, I think that is ok,good enough.
+	
+	google protobuf protoc  is  hbase must rely.  need not talk about it.  
 
 
 C2HBASE support Python visit hbase server.
 
 This project  rely  these moudles list as follows:
 
-1 hbase protobuf files,in the personal Envinment,
+1. hbase protobuf files,in the personal Envinment,
  
    protoc --version
 
@@ -19,8 +25,8 @@ This project  rely  these moudles list as follows:
  
   use protoc product(convert *.proto) *.cc and *.h and g++ compile lib CHBaseProto.a  with  -std=c++0x -fPIC.
 
-2 zookeeper
+2. zookeeper
 
-3 poco lib
+3. poco lib
 
  

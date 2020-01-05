@@ -4,7 +4,8 @@ There are some diffrent between this project and apache/hbase native client.
 
 First is libraries rely :
      
-	apache/hbase native client rely on GFLAGS,glog ,Wangle(C++ networking library) which depends fizz, folly(FOLLY_LIBRARIES),and so on.  These librarys are completed by google and facebook.
+	apache/hbase native client rely on GFLAGS,glog ,Wangle(C++ networking library) which depends fizz, folly(FOLLY_LIBRARIES),and so on. 
+	 These libraries are completed by google or facebook.
      
 	c2hbase only just use Poco and C++ standard library, I think that is ok,good enough.
 	
@@ -23,7 +24,11 @@ This project  rely  these moudles list as follows:
 
   you can use other version, and mentions that hbase 1.x use libprotoc 2.x.x  , hbase 2.x use libprotoc 3.x.x
  
-  use protoc product(convert *.proto) *.cc and *.h and g++ compile lib CHBaseProto.a  with  -std=c++0x -fPIC.
+  use protoc product(convert *.proto) *.cc and *.h just do like this with proto files '*.proto' 
+  in the directory 'hbase-master/hbase-protocol/src/main/protobuf/':
+	#protoc -I=$SRC_DIR --cpp_out=$DST_DIR $SRC_DIR/*.proto
+
+ and then use g++ compile lib CHBaseProto.a  with  -std=c++0x -fPIC.
 
 2. zookeeper
 

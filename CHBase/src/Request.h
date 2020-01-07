@@ -29,7 +29,14 @@ using namespace Poco::Net;
 //using Poco::Net::SocketAddress;
 //using hbase::pb::ConnectionHeader;
 
-
+enum REQUEST_ERRORS {
+	REQ_SEND_FAIL = 0,
+	REQ_SEND_SUCCESS = 1,
+	REQ_RECEIVE_FAIL = 2,
+	REQ_RECEIVE_CALLID = 4,
+	REQ_RECEIVE_SERV_EXCEPTION = 8,
+	REQ_RECEIVE_SUCCESS = 16
+};
 namespace CHBase {
 
 class Request {

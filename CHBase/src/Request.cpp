@@ -8,12 +8,7 @@
 #include "Request.h"
 #include <pwd.h>
 
-#define  REQ_SEND_SUCCESS 1
-#define  REQ_SEND_FAIL 2
-#define  REQ_RECEIVE_FAIL 4
-#define  REQ_RECEIVE_SERV_EXCEPTION 8
-#define  REQ_RECEIVE_CALLID 16
-#define  REQ_RECEIVE_SUCCESS 32
+
 
 namespace CHBase {
 

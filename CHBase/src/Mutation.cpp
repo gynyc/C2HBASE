@@ -1,18 +1,28 @@
 /*
  * Mutation.cpp
  *
- *  Created on: 2019年9月9日
+ *  Created on: 2020年1月19日
  *      Author: apple
  */
 
 #include "Mutation.h"
 
+namespace CHBase {
+
 Mutation::Mutation() {
-	// TODO Auto-generated constructor stub
 
 }
 
 Mutation::~Mutation() {
-	// TODO Auto-generated destructor stub
+
+}
+long Mutation::heapSize()
+{
+
+	long heapsize=MUTATION_OVERHEAD;
+	heapsize+=Row::heapSize();
+	return heapsize;
+
 }
 
+} /* namespace CHBase */

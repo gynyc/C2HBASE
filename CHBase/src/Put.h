@@ -18,8 +18,8 @@ class Put : public Mutation{
 public:
 	Put();
 	Put(string& row, long ts=((unsigned long)(-1))>>1);
-	Put(const char*  row, long ts((unsigned long)(-1))>>1);
-	Put(const char*  row, int rowOffset, int rowLength,  long ts((unsigned long)(-1))>>1);
+	Put(const char*  row, long ts=((unsigned long)(-1))>>1);
+	Put(const char*  row, int rowOffset, int rowLength,  long ts=((unsigned long)(-1))>>1);
 	virtual ~Put();
 
 };

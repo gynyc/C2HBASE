@@ -12,7 +12,7 @@ namespace CHBase {
 Cell::Cell() {
 
 }
-Cell::Cell(string& family, string& qualifier, string& RowKey, string& Value, long timestamp=(unsigned long )(-1)>>1) {
+Cell::Cell(string& family, string& qualifier, string& RowKey, string& Value, long timestamp) {
 	this->RowKey = RowKey;
 	this->Value = Value;
 	this->family = family;

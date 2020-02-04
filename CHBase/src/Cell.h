@@ -25,8 +25,8 @@ private:
 
 public:
 	Cell();
-	Cell(string& family, string& qualifier, string& RowKey, string& Value);
-	Cell(string& family, string& qualifier, string& RowKey, string& Value, long timestamp);
+	//Cell(string& family, string& qualifier, string& RowKey, string& Value);
+	Cell(string& family, string& qualifier, string& RowKey, string& Value, long timestamp=((unsigned long )(-1))>>1);
 	virtual ~Cell();
 
 	void show()
